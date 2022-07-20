@@ -20,9 +20,9 @@ export const PageWrapper = ({ children, breadcrumbs }: PageWrapperProps) => {
   const [load] = useRefreshAuth();
 
   useEffect(() => {
-    if (authentication.token === undefined) {
-      navigate('/login')
-    }
+    // if (authentication.token === undefined) {
+    //   navigate('/login')
+    // }
     if (authentication.token !== undefined && authentication.timestamp < expiredTimestamp) {
       load()
     }
